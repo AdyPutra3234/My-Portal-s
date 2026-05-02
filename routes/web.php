@@ -17,3 +17,9 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('about', ['title' => 'About Us']);
 });
+
+Route::get('/article/{id}', function ($id) {
+
+
+    return view('articleDetail', ['title' => '']);
+});

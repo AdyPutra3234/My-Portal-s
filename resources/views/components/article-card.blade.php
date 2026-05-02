@@ -17,7 +17,7 @@
         </p>
     </div>
     <div>
-        <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 group">
+        <a href="/article/1" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 group">
             Baca Selengkapnya 
             <span class="ml-1.5 transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
