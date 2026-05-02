@@ -1,13 +1,14 @@
 <?php
 
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Berita / Artikel Terkini']);
+    return view('home', ['title' => 'Berita / Artikel Terkini', 'articles' => Article::all()]);
 });
 
 Route::get('/trending', function () {
-    return view('trending', ['title' => 'On Trending']);
+    return view('trending', ['title' => 'On Trending', 'articles' => Article::where('ontrending', 1)->get()]);
 });
 
 Route::get('/contact', function () {
@@ -20,6 +21,7 @@ Route::get('/about', function () {
 
 Route::get('/article/{id}', function ($id) {
 
+    $article = Article::find($id);
 
-    return view('articleDetail', ['title' => '']);
+    return view('articleDetail', ['title' => '', 'article' => $article]);
 });
