@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/trending', function () {
-    return view('trending', ['title' => 'On Trending', 'articles' => Article::where('ontrending', 1)->get()]);
+    return view('trending', ['title' => 'On Trending', 'articles' => Article::where('on_trending', 1)->get()]);
 });
 
 Route::get('/contact', function () {
@@ -19,9 +19,6 @@ Route::get('/about', function () {
     return view('about', ['title' => 'About Us']);
 });
 
-Route::get('/article/{id}', function ($id) {
-
-    $article = Article::find($id);
-
+Route::get('/article/{article:slug}', function (Article $article) {
     return view('articleDetail', ['title' => '', 'article' => $article]);
 });

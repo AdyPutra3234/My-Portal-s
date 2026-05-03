@@ -17,7 +17,7 @@
         </p>
     </div>
     <div>
-        <a href="/article/{{$article->id_article}}" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 group">
+        <a href="/article/{{$article->slug}}" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 group">
             Baca Selengkapnya 
             <span class="ml-1.5 transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
