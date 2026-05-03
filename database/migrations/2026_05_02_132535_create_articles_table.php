@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id('id_article');
             $table->string('title');
+            $table->string('slug');
             $table->string('category');
-            $table->boolean('ontrending');
+            $table->boolean('on_trending');
             $table->string('author');
             $table->text('body');
             $table->timestamps();
